@@ -28,7 +28,9 @@ function App() {
             Wakeup Safe
           </a>
  
-          <br>
+          
+          <p>
+          </p>
           <button onClick={signOut}>Sign out</button>  
           
 
