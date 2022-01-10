@@ -1,0 +1,57 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wusamplify-dev-34027-authRole",
+      "UnauthRoleArn": "arn:aws:iam::652146672362:role/amplify-wusamplify-dev-34027-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::652146672362:role/amplify-wusamplify-dev-34027-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-wusamplify-dev-34027-deployment",
+      "UnauthRoleName": "amplify-wusamplify-dev-34027-unauthRole",
+      "StackName": "amplify-wusamplify-dev-34027",
+      "StackId": "arn:aws:cloudformation:us-east-1:652146672362:stack/amplify-wusamplify-dev-34027/f62f56b0-71f0-11ec-86e5-0accf76ef031",
+      "AmplifyAppId": "d2o56bsms26sdv"
+    }
+  },
+  "auth": {
+    "wusamplifyc989f024": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-wusamplify-dev-34027-deployment/amplify-cfn-templates/auth/wusamplifyc989f024-cloudformation-template.json",
+        "logicalId": "authwusamplifyc989f024"
+      },
+      "lastPushTimeStamp": "2022-01-10T09:34:03.675Z",
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::652146672362:role/snsc989f02434027-dev",
+        "UserPoolId": "us-east-1_STvUPUqDJ",
+        "AppClientIDWeb": "1po65esdjspp8qr41rt0cjodp7",
+        "AppClientID": "1fvdgobmi4sccd4tv1niu41arf",
+        "IdentityPoolId": "us-east-1:09a1462c-cc24-48d6-bd1d-2780186c31f0",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:652146672362:userpool/us-east-1_STvUPUqDJ",
+        "IdentityPoolName": "wusamplifyc989f024_identitypool_c989f024__dev",
+        "UserPoolName": "wusamplifyc989f024_userpool_c989f024"
+      },
+      "lastPushDirHash": "3qstM6VhbDWO5oQmO/3CgVVmGH0="
+    }
+  }
+}
