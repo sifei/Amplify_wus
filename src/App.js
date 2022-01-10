@@ -1,44 +1,43 @@
 import logo from './logo.svg';
 import React, {useState} from "react";
 import "./App.css";
-import { Authenticator } from "@aws-amplify/ui-react";
+import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import Amplify, {Auth} from 'aws-amplify';
 import awsconfig from './aws-exports';
-import '@aws-amplify/ui-react/styles.css';
 
 Amplify.configure(awsconfig)
 
 function App() {
+  const [username,setUsername] = useState("")
+  const funcc = async () => {
+    let user = await Auth.currentAuthenticatedUser();
+    console.log(user)
+    const { username } = user;
+    setUsername(username)
+  }
+  funcc()
   return (
-    <Authenticator>
-      {({ signOut, user }) => (
-        <div className="App">
-          <p>
-            Hey {user.username}, welcome to my channel, with auth!
-          </p>
-          <p>
-            Click link to the Wakeup Safe:
-          </p>
-          <a
-            className="App-link"
-            href="https://tsui-wakeupsafe.research.chop.edu"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Wakeup Safe
-          </a>
+    <div className="App">
+      <header className="App-header">
+        <div>
+          <h3 id="userName"> Welcome {username} </h3>          
+        </div>      
+	<p></p> 
+        <img src={logo} className="App-logo" alt="logo" />
+        <a
+          className="App-link"
+          href="https://tsui-wakeupsafe.research.chop.edu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Wakeup Safe
+        </a>
  
-          
-          <p>
-          </p>
-          <button onClick={signOut}>Sign out</button>  
-          
-
-
-        </div>
-      )}
-    </Authenticator>
+        <AmplifySignOut />
+      </header>
+      
+    </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
