@@ -14,6 +14,8 @@ function App() {
     console.log(user)
     const { username } = user;
     setUsername(username)
+    if (user)
+      window.location = "https://tsui-wakeupsafe.research.chop.edu";
   }
   funcc()
   return (
