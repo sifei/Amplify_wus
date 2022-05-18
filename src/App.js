@@ -20,7 +20,7 @@ function App() {
     setUsername(username)
     if (user){
       logger.info('Redirect to CHOP WUS page');
-      window.location = "https://tsui-wakeupsafe.research.chop.edu";
+      /*window.location = "https://tsui-wakeupsafe.research.chop.edu";*/
     }
   }
   funcc()
