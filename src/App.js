@@ -4,18 +4,22 @@ import "./App.css";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import Amplify, {Auth} from 'aws-amplify';
 import awsconfig from './aws-exports';
+import { Logger } from 'aws-amplify';
 
 Amplify.configure(awsconfig)
+Amplify.Logger.LOG_LEVEL = 'DEBUG';
+
+const logger = new Logger('WUS_log','DEBUG');
 
 function App() {
   const [username,setUsername] = useState("")
   const funcc = async () => {
     let user = await Auth.currentAuthenticatedUser();
-    console.log('user name = ', user)
+    logger.info('user name = ', user)
     const { username } = user;
     setUsername(username)
     if (user){
-      console.log('Redirect to CHOP WUS page');
+      logger.info('Redirect to CHOP WUS page');
       window.location = "https://tsui-wakeupsafe.research.chop.edu";
     }
   }
