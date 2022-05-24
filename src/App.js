@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './loading.svg';
 import React, {useState} from "react";
 import "./App.css";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
@@ -32,7 +32,16 @@ function App() {
         </div>      
 	<p></p> 
         <img src={logo} className="App-logo" alt="logo" />
-        <a
+        
+      </header>
+      
+    </div>
+  );
+}
+
+export default withAuthenticator(App);
+
+/*<a
           className="App-link"
           href="https://tsui-wakeupsafe.research.chop.edu"
           target="_blank"
@@ -42,10 +51,4 @@ function App() {
         </a>
  	<p></p>
         <AmplifySignOut />
-      </header>
-      
-    </div>
-  );
-}
-
-export default withAuthenticator(App);
+*/
