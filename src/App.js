@@ -27,11 +27,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>
-          <h3 id="userName"> Welcome {username} </h3>          
-        </div>      
-	<p></p> 
-        <img src={logo} className="App-logo" alt="logo" />
+        
         
       </header>
       
@@ -41,7 +37,14 @@ function App() {
 
 export default withAuthenticator(App);
 
-/*<a
+/*
+	<div>
+          <h3 id="userName"> Welcome {username} </h3>          
+        </div>      
+	<p></p> 
+        <img src={logo} className="App-logo" alt="logo" />
+	
+	<a
           className="App-link"
           href="https://tsui-wakeupsafe.research.chop.edu"
           target="_blank"
