@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-        
+        <AmplifySignOut />
       </header>
       
     </div>
