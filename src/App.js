@@ -1,5 +1,5 @@
 import logo from './loading.svg';
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./App.css";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import Amplify, {Auth} from 'aws-amplify';
@@ -12,7 +12,12 @@ Amplify.Logger.LOG_LEVEL = 'DEBUG';
 const logger = new Logger('WUS_log','DEBUG');
 
 function App() {
-  const [username,setUsername] = useState("")
+  const [username,setUsername] = useState("");
+  const [userID,setUserID] = useState("");
+  useEffect(() => {
+    Auth.currentAuthenticatedUser().then((data) => {
+      setUserID(data.attributes.sub);
+  });});
   const funcc = async () => {
     let user = await Auth.currentAuthenticatedUser();
     logger.info('user name = ', user)
@@ -20,7 +25,7 @@ function App() {
     setUsername(username)
     if (user){
       logger.info('Redirect to CHOP WUS page');
-      window.location = "https://tsui-wakeupsafe.research.chop.edu";
+      window.location = "https://tsui-wakeupsafe.research.chop.edu/?userID="+userID+"&username="+username;
     }
   }
   funcc()
