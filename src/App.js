@@ -12,8 +12,8 @@ Amplify.Logger.LOG_LEVEL = 'DEBUG';
 const logger = new Logger('WUS_log','DEBUG');
 
 function App() {
-  const [username,setUsername] = useState("")
-  const [userID,setUserID] = useState("")
+  const [username,setUsername] = useState("");
+  const [userID,setUserID] = useState("");
   useEffect(() => {
     Auth.currentAuthenticatedUser().then((data) => {
       setUserID(data.attributes.sub);
