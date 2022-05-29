@@ -1,5 +1,5 @@
 import logo from './loading.svg';
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import "./App.css";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import Amplify, {Auth} from 'aws-amplify';
@@ -20,7 +20,7 @@ function App() {
     setUsername(username)
     if (user){
       logger.info('Redirect to CHOP WUS page');
-      window.location = "https://tsui-wakeupsafe.research.chop.edu";//?userID="+userID+"&username="+username;
+      window.location = "https://tsui-wakeupsafe.research.chop.edu";
     }
   }
   funcc()
