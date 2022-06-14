@@ -25,7 +25,7 @@ function App() {
     setUsername(username)
     if (user){
       logger.info('Redirect to CHOP WUS page');
-      window.location = "https://tsui-wakeupsafe.research.chop.edu/?userID="+userID+"&username="+username;
+      window.location = "http://44.206.211.1:5000/?userID="+userID+"&username="+username;
     }
   }
   funcc()
