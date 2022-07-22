@@ -24,9 +24,14 @@ function App() {
     const { username } = user;
     setUsername(username)
     setUserID(user.attributes.sub)
+    var newwin;
     if (userID){
       //logger.info('Redirect to CHOP WUS page');
-      window.open("http://44.206.211.1:3000/?userID="+userID+"&username="+username,"_blank");
+      if (newwin == null)
+        {
+        window.open("http://44.206.211.1:3000/?userID="+userID+"&username="+username,'newwin');
+	}
+	else{newwin.focus();}
       //window.location = "https://44.206.211.1.nip.io/?userID="+userID+"&username="+username;
     }
   }
