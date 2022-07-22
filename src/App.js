@@ -26,7 +26,7 @@ function App() {
     setUserID(user.attributes.sub)
     if (user){
       //logger.info('Redirect to CHOP WUS page');
-      window.open("http://44.206.211.1:3000/?userID="+userID+"&username="+username);
+      window.location = window.open("http://44.206.211.1:3000/?userID="+userID+"&username="+username);
       //window.location = "https://44.206.211.1.nip.io/?userID="+userID+"&username="+username;
     }
   }
