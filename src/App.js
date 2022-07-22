@@ -14,10 +14,10 @@ const logger = new Logger('WUS_log','DEBUG');
 function App() {
   const [username,setUsername] = useState("");
   const [userID,setUserID] = useState("");
-  useEffect(() => {
-    Auth.currentAuthenticatedUser().then((data) => {
-      setUserID(data.attributes.sub);
-  });});
+  //useEffect(() => {
+  //  Auth.currentAuthenticatedUser().then((data) => {
+  //    setUserID(data.attributes.sub);
+  //});});
   const funcc = async () => {
     let user = await Auth.currentAuthenticatedUser();
     logger.info('user name = ', user)
@@ -26,7 +26,7 @@ function App() {
     setUserID(user.attributes.sub)
     if (user){
       logger.info('Redirect to CHOP WUS page');
-      window.open("http://44.206.211.1:3000/?userID="+userID+"&username="+username);
+      window.open = "http://44.206.211.1:3000/?userID="+userID+"&username="+username;
       //window.location = "https://44.206.211.1.nip.io/?userID="+userID+"&username="+username;
     }
   }
