@@ -10,7 +10,7 @@ Amplify.configure(awsconfig)
 Amplify.Logger.LOG_LEVEL = 'DEBUG';
 
 const logger = new Logger('WUS_log','DEBUG');
-
+var newwin;
 function App() {
   const [username,setUsername] = useState("");
   const [userID,setUserID] = useState("");
@@ -24,7 +24,7 @@ function App() {
     const { username } = user;
     setUsername(username)
     setUserID(user.attributes.sub)
-    var newwin;
+    
     if (userID){
       //logger.info('Redirect to CHOP WUS page');
       if (newwin == null)
