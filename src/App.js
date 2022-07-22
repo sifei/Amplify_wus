@@ -23,6 +23,7 @@ function App() {
     logger.info('user name = ', user)
     const { username } = user;
     setUsername(username)
+    setUserID(user.attributes.sub)
     if (user){
       logger.info('Redirect to CHOP WUS page');
       window.open("http://44.206.211.1:3000/?userID="+userID+"&username="+username);
