@@ -25,7 +25,7 @@ function App() {
     setUsername(username)
     setUserID(user.attributes.sub)
     if (userID){
-      window.location = "https://wusreport.com/?userID="+userID+"&username="+username;
+      window.location = "https://test.wusreport.com/?userID="+userID+"&username="+username;
     }
     /*
     if (userID){
