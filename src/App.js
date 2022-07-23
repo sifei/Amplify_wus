@@ -24,16 +24,20 @@ function App() {
     const { username } = user;
     setUsername(username)
     setUserID(user.attributes.sub)
-    
+    if (userID){
+      window.location = "https://prod_front.wusreport.com/?userID="+userID+"&username="+username;
+    }
+    /*
     if (userID){
       //logger.info('Redirect to CHOP WUS page');
       if (newwin == null)
         {
-        window.open("http://44.206.211.1:3000/?userID="+userID+"&username="+username,'newwin');
+        window.open("https://prod_front.wusreport.com/?userID="+userID+"&username="+username,'newwin');
 	}
 	else{newwin.focus();}
       //window.location = "https://44.206.211.1.nip.io/?userID="+userID+"&username="+username;
     }
+    */
   }
   funcc()
   return (
