@@ -7,7 +7,7 @@ import { SelectField, TextField } from '@aws-amplify/ui-react';
 import { Hub } from 'aws-amplify';
 import axios from "axios";
 import "./App.css";
-import 'awsconfig' from './aws-exports';
+
 
 Amplify.configure(awsExports);
 const logger = new Logger('WUS_log', 'DEBUG');
