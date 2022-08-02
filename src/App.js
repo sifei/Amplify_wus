@@ -12,8 +12,8 @@ import "./App.css";
 Amplify.configure(awsExports);
 const logger = new Logger('WUS_log', 'DEBUG');
 
-const BACKEND_URL = "https://tsui-wakeupsafe.research.chop.edu"; //EC2 IP Addr -->"http://44.206.211.1:5000"
-const FRONTEND_URL="https://tsui-wus.research.chop.edu"; 
+const BACKEND_URL = "https://www.wusreport.com:5001"; //EC2 IP Addr -->"http://44.206.211.1:5000"
+const FRONTEND_URL="https://www.wusreport.com"; 
 
 export default function App() {
   
